@@ -1,0 +1,16 @@
+auto\_proto package
+===================
+
+.. automodule:: auto_proto
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+
+   auto_proto._version
+   auto_proto.auto_proto
+

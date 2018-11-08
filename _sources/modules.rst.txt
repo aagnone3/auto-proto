@@ -1,0 +1,7 @@
+auto_proto
+==========
+
+.. toctree::
+   :maxdepth: 100
+
+   auto_proto
