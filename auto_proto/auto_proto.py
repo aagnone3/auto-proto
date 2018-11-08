@@ -20,11 +20,11 @@ def get_type(values):
         elif isinstance(one_value, str):
             # decide between a string and enum
             # simple heuristic: % of unique elements after removing empty strings
-            non_empty = list(filter(non_empty_string, values))
-            if len(non_empty) > 0:
-                perc_unique = 100.0 * len(set(non_empty)) / len(non_empty)
-                if 0.0 < perc_unique < 50.0:
-                    return "enum"
+            # non_empty = list(filter(non_empty_string, values))
+            # if len(non_empty) > 0:
+            #     perc_unique = 100.0 * len(set(non_empty)) / len(non_empty)
+            #     if 0.0 < perc_unique < 50.0:
+            #         return "enum"
             return "string"
         else:
             # is numeric -- decide between int and float by attempting a bit shift (raises Exception for float)
