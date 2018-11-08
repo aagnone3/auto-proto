@@ -10,7 +10,7 @@ function error_out() {
 }
 
 # re-generate docs from docstrings
-cd ${DOCS_BASE_DIR}
+mkdir -p ${DOCS_BASE_DIR} && cd ${DOCS_BASE_DIR}
 sphinx-apidoc -d 100 -f -M -e -P -o source ${MODULE_DIR}
 [[ $? -eq 0 ]] || error_out "Failed to re-generate rst files with 'sphinx-apidoc'."
 

@@ -6,7 +6,8 @@ python:
 env:
     global:
         - TEST_DIR=/tmp/module_testing
-        - REPO=auto-proto
+        - |
+          REPO=$(grep "friendly_name =" setup.cfg | head -n1 | cut -d= -f2 | sed 's/["\s ]//g')
         - |
           MODULE=$(grep "module_name =" setup.cfg | head -n1 | cut -d= -f2 | sed 's/["\s ]//g')
 
@@ -29,7 +30,8 @@ after_success:
 notifications:
     email:
         recipients:
-            - anthonyagnone@gmail.com
+            - |
+              MODULE=$(grep "author_email =" setup.cfg | head -n1 | cut -d= -f2 | sed 's/["\s ]//g')
         on_success: never
         on_failure: always
 
