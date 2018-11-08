@@ -31,30 +31,41 @@ Dependencies
 ~~~~~~~~~~~~
 
 auto-proto is tested to work under Python 3.x.
-See the requirements via the following command::
+See the requirements via the following command:
+
+.. code-block:: bash
+
   cat requirements.txt
 
 Installation
 ~~~~~~~~~~~~
 
 auto-proto is currently available on the PyPi's repository and you can
-install it via `pip`::
+install it via `pip`:
+
+.. code-block:: bash
 
   pip install -U auto-proto
 
 If you prefer, you can clone it and run the setup.py file. Use the following
-commands to get a copy from GitHub and install all dependencies::
+commands to get a copy from GitHub and install all dependencies:
+
+.. code-block:: bash
 
   git clone https://github.com/aagnone3/auto-proto.git
   cd auto-proto
   pip install .
 
-Or install using pip and GitHub::
+Or install using pip and GitHub:
+
+.. code-block:: bash
 
   pip install -U git+https://github.com/aagnone3/auto-proto.git
 
 Testing
 ~~~~~~~
 
-::
-    make test
+.. code-block:: bash
+
+  make test
+  
