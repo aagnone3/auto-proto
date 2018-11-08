@@ -11,6 +11,6 @@ Submodules
 
 .. toctree::
 
-   auto_proto._version
    auto_proto.auto_proto
+   auto_proto.version
 

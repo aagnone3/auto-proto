@@ -1,0 +1,7 @@
+auto\_proto.version module
+==========================
+
+.. automodule:: auto_proto.version
+    :members:
+    :undoc-members:
+    :show-inheritance:
