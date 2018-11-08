@@ -2,7 +2,7 @@
 PWD ?= $(PWD)
 
 MODULE_NAME = $(shell grep "module_name =" setup.cfg | head -n1 | cut -d= -f2 | sed 's/["\s ]//g')
-VERSION_FN = ${MODULE_NAME}/_version.py
+VERSION_FN = ${MODULE_NAME}/version.py
 
 help:
 	@echo "Personal container."

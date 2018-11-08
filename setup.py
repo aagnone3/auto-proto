@@ -18,7 +18,7 @@ def get_requirements():
 
 
 def get_version(module_name):
-    version_fn = path.join(module_name, "_version.py")
+    version_fn = path.join(module_name, "version.py")
     with open(version_fn) as fp:
         version = float(fp.readlines()[0].strip().split('=')[1].replace(' ', ''))
     return version
