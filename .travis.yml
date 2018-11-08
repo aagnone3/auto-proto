@@ -1,0 +1,44 @@
+language: python
+
+python:
+    - '3.5'
+
+env:
+    global:
+        - TEST_DIR=/tmp/module_testing
+        - REPO=auto-proto
+        - |
+          MODULE=$(grep "module_name =" setup.cfg | head -n1 | cut -d= -f2 | sed 's/["\s ]//g')
+
+# TODO install in a Docker container
+addons:
+    apt:
+        packages:
+            - libexempi3
+
+install:
+    - source .travis/install.sh
+
+script:
+    - bash .travis/test.sh
+
+after_success:
+    - source .travis/upload_test_coverage.sh
+    - source .travis/generate_docs.sh
+
+notifications:
+    email:
+        recipients:
+            - anthonyagnone@gmail.com
+        on_success: never
+        on_failure: always
+
+deploy:
+    provider: pages
+    skip-cleanup: true
+    keep-history: true
+    github-token: ${GITHUB_TOKEN}
+    target-branch: gh-pages
+    local-dir: docs/build/html
+    on:
+        branch: master
