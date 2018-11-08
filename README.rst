@@ -23,7 +23,7 @@ examples of the data that you wish to model.
 Documentation
 -------------
 
-Documentation can be found at the github pages _here
+Documentation can be found at the github pages here_
 
 .. _here: https://aagnone3.github.io/auto-proto/
 
